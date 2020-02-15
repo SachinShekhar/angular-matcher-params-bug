@@ -1,4 +1,21 @@
 <h1>
   Angular Matcher Bug
 </h1>
+
+<div>
+  <h3>When only 'url[0]' is consumed in 'matcher':</h3>
+  <a routerLink="/@angular">@angular</a>
+  <br />
+  <a routerLink="/@angular/123456789">@angular/123456789</a>
+</div>
+
+<div>
+  <h3>When entire 'url' is consumed in 'matcher':</h3>
+  <a routerLink="/~angular">~angular</a>
+  <br />
+  <a routerLink="/~angular/123456789">~angular/123456789</a>
+</div>
+
 <router-outlet></router-outlet>
+<h3>Router State (Params searched from entire route state tree):</h3>
+<ss-ngrx-router-store-state></ss-ngrx-router-store-state>
